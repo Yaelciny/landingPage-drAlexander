@@ -25,7 +25,7 @@ function PaymentCard({ item, index }: { item: PaymentFacility; index: number }) 
       className="group relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 shadow-sm hover:shadow-lg hover:shadow-cyan-500/10 hover:bg-white transition-all duration-300"
     >
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-md shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
+        <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-md shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
           <Icon className="w-6 h-6 text-white" />
         </div>
         <div>
@@ -50,7 +50,7 @@ export default function Payments({ data }: PaymentsProps) {
   return (
     <section
       id="pagos"
-      className="py-28 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950"
+      className="py-28 relative overflow-hidden bg-linear-to-br from-slate-900 via-slate-900 to-cyan-950"
     >
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">

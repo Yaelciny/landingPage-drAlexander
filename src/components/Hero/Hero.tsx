@@ -12,7 +12,7 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950"
+      className="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-slate-950 via-slate-900 to-cyan-950"
     >
       {/* Animated background orbs */}
       <div className="absolute inset-0 pointer-events-none">

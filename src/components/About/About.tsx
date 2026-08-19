@@ -77,13 +77,13 @@ export default function About({ data }: AboutProps) {
               variants={fadeUp}
               className="grid grid-cols-2 gap-6 mb-10"
             >
-              <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-2xl p-6 border border-cyan-100">
+              <div className="bg-linear-to-br from-cyan-50 to-teal-50 rounded-2xl p-6 border border-cyan-100">
                 <p className="text-4xl font-bold text-cyan-600 mb-1">
                   {data.yearsExperience}+
                 </p>
                 <p className="text-slate-600 text-sm font-medium">años de experiencia clínica</p>
               </div>
-              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200">
+              <div className="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200">
                 <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-2">
                   <GraduationCap className="w-5 h-5 text-cyan-600" />
                 </div>
@@ -102,7 +102,7 @@ export default function About({ data }: AboutProps) {
               viewport={{ once: true }}
               custom={1}
               variants={fadeUp}
-              className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
+              className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-full bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">

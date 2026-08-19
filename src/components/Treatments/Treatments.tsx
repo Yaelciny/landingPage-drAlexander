@@ -33,11 +33,11 @@ function TreatmentCard({ item, index }: { item: Treatment; index: number }) {
       className="group relative bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-100 transition-all duration-300"
     >
       {/* Gradient on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-50/0 to-teal-50/0 group-hover:from-cyan-50/80 group-hover:to-teal-50/50 transition-all duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-cyan-50/0 to-teal-50/0 group-hover:from-cyan-50/80 group-hover:to-teal-50/50 transition-all duration-300 pointer-events-none" />
 
       <div className="relative z-10">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 border border-cyan-200/60 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="w-12 h-12 rounded-xl bg-linear-to-br from-cyan-500/10 to-teal-500/10 border border-cyan-200/60 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
           <Icon className="w-6 h-6 text-cyan-600" />
         </div>
 

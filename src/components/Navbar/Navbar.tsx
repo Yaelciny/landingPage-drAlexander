@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2" id="nav-logo">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
               <span className="text-white text-xs font-bold">AC</span>
             </div>
             <span className="text-white font-semibold text-sm hidden sm:block">

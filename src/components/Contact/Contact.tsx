@@ -86,11 +86,11 @@ export default function Contact({ data }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
+            className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
           >
             {/* Doctor info */}
             <div className="mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30">
+              <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30">
                 <span className="text-white text-xl font-bold">AC</span>
               </div>
               <h3 className="text-white font-bold text-lg leading-snug mb-1">
