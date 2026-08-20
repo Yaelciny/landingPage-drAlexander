@@ -20,6 +20,14 @@ interface FooterProps {
 export default function Footer({ contact }: FooterProps) {
   const year = new Date().getFullYear();
 
+  // Scroll suave a la seccion indicada (mismo patron que Navbar)
+  const handleNav = (href: string) => {
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      el?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <footer className="bg-slate-950 text-slate-400">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
@@ -47,6 +55,10 @@ export default function Footer({ contact }: FooterProps) {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNav(link.href);
+                    }}
                     className="hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.label}

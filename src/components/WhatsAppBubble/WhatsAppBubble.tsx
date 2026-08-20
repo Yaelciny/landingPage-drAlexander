@@ -58,7 +58,10 @@ export default function WhatsAppBubble({
             y: 0,
           }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+          transition={{
+            default: { type: 'spring', stiffness: 300, damping: 22 },
+            scale: pulsed ? { type: 'tween', duration: 0.5 } : { type: 'spring', stiffness: 300, damping: 22 }
+          }}
           className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-2xl shadow-green-500/40 group"
           style={{ background: 'linear-gradient(135deg, #25d366, #128c5e)' }}
         >

@@ -31,54 +31,59 @@ export default function Contact({ data }: ContactProps) {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — CTA block */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-cyan-600 font-semibold text-sm uppercase tracking-widest mb-4"
-            >
-              <span className="h-px w-8 bg-cyan-500" />
-              {data.sectionLabel}
-            </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight"
-            >
-              {data.headline}
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-slate-500 text-lg leading-relaxed mb-10"
-            >
-              {data.subheadline}
-            </motion.p>
-
-            <motion.a
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              href={data.ctaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="contact-cta"
-              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
-            >
-              {data.ctaLabel}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.a>
+        {/* Header + CTA centrado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          <div className="inline-flex items-center gap-2 text-cyan-600 font-semibold text-sm uppercase tracking-widest mb-4">
+            <span className="h-px w-8 bg-cyan-500" />
+            {data.sectionLabel}
+            <span className="h-px w-8 bg-cyan-500" />
           </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+            {data.headline}
+          </h2>
+          <p className="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+            {data.subheadline}
+          </p>
+          <a
+            href={data.ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            id="contact-cta"
+            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+          >
+            {data.ctaLabel}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+
+          {/* Left — Mapa embebido */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/15 border border-slate-100 min-h-[420px]"
+          >
+            <iframe
+              id="contact-map"
+              title="Ubicación del consultorio — Natura Grupo Médico"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.0!2d-103.4159!3d20.7127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae7e7a4f1f4f%3A0x0!2sAv.%20Abedules%20539%2C%20Zapopan%2C%20Jalisco%2C%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '420px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </motion.div>
 
           {/* Right — contact info card */}
           <motion.div
@@ -86,11 +91,11 @@ export default function Contact({ data }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
+            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
           >
             {/* Doctor info */}
             <div className="mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30">
                 <span className="text-white text-xl font-bold">AC</span>
               </div>
               <h3 className="text-white font-bold text-lg leading-snug mb-1">
