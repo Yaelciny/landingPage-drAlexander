@@ -73,14 +73,14 @@ export default function Navbar() {
             }}
             id="nav-logo"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:shadow-cyan-500/50 transition-shadow duration-300">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg shadow-blue-700/30 group-hover:shadow-blue-700/50 transition-shadow duration-300">
               <span className="text-white text-xs font-bold tracking-tight">AC</span>
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-bold tracking-wide text-white">
                 Dr. Alexander Cerda
               </span>
-              <span className="text-[10px] text-cyan-400 font-medium tracking-widest uppercase">
+              <span className="text-[10px] text-blue-400 font-medium tracking-widest uppercase">
                 Ortodoncia
               </span>
             </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="relative text-sm font-medium tracking-wide text-white/80 hover:text-white transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium tracking-wide text-white/80 hover:text-white transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </motion.a>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 e.preventDefault();
                 handleNav("#contacto");
               }}
-              className="hidden md:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-teal-500 hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-300"
+              className="hidden md:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:shadow-lg hover:shadow-blue-700/30 hover:scale-105 transition-all duration-300"
             >
               Agendar cita
             </a>
@@ -185,7 +185,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleNav("#contacto");
                   }}
-                  className="mt-3 mx-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                  className="mt-3 mx-4 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-blue-700/25 transition-all duration-300"
                 >
                   Agendar cita
                 </motion.a>

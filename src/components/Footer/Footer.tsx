@@ -59,7 +59,7 @@ export default function Footer({ contact }: FooterProps) {
                       e.preventDefault();
                       handleNav(link.href);
                     }}
-                    className="hover:text-cyan-400 transition-colors duration-200"
+                    className="hover:text-blue-400 transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -75,28 +75,28 @@ export default function Footer({ contact }: FooterProps) {
             </p>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-cyan-500 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0" />
                 <span className="text-slate-400 leading-snug">{contact.location}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-500 flex-shrink-0" />
-                <a href={contact.phoneHref} className="hover:text-cyan-400 transition-colors">
+                <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                <a href={contact.phoneHref} className="hover:text-blue-400 transition-colors">
                   {contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-cyan-500 flex-shrink-0" />
-                <a href={contact.emailHref} className="hover:text-cyan-400 transition-colors">
+                <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                <a href={contact.emailHref} className="hover:text-blue-400 transition-colors">
                   {contact.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <InstagramIcon className="w-4 h-4 text-cyan-500 flex-shrink-0" />
+                <InstagramIcon className="w-4 h-4 text-blue-500 flex-shrink-0" />
                 <a
                   href={contact.instagramHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition-colors"
+                  className="hover:text-blue-400 transition-colors"
                 >
                   {contact.instagram}
                 </a>

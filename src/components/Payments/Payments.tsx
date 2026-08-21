@@ -22,10 +22,10 @@ function PaymentCard({ item, index }: { item: PaymentFacility; index: number }) 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45, delay: index * 0.1 }}
-      className="group relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 shadow-sm hover:shadow-lg hover:shadow-cyan-500/10 hover:bg-white transition-all duration-300"
+      className="group relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 shadow-sm hover:shadow-lg hover:shadow-blue-600/10 hover:bg-white transition-all duration-300"
     >
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-linear-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-md shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
+        <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-md shadow-blue-700/30 group-hover:scale-110 transition-transform duration-300">
           <Icon className="w-6 h-6 text-white" />
         </div>
         <div>
@@ -50,12 +50,12 @@ export default function Payments({ data }: PaymentsProps) {
   return (
     <section
       id="pagos"
-      className="py-28 relative overflow-hidden bg-linear-to-br from-slate-900 via-slate-900 to-cyan-950"
+      className="py-28 relative overflow-hidden bg-linear-to-br from-slate-900 via-slate-900 to-blue-950"
     >
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-teal-500/8 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/3 w-64 h-64 bg-blue-600/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-blue-900/6 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -65,11 +65,11 @@ export default function Payments({ data }: PaymentsProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-4"
+            className="inline-flex items-center gap-2 text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4"
           >
-            <span className="h-px w-8 bg-cyan-400" />
+            <span className="h-px w-8 bg-blue-400" />
             {data.sectionLabel}
-            <span className="h-px w-8 bg-cyan-400" />
+            <span className="h-px w-8 bg-blue-400" />
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

@@ -26,8 +26,8 @@ export default function Contact({ data }: ContactProps) {
     >
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-cyan-50 to-transparent opacity-70 rounded-full translate-x-1/3 -translate-y-1/3 blur-2xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-teal-50 to-transparent opacity-60 rounded-full -translate-x-1/4 translate-y-1/4 blur-2xl" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-50 to-transparent opacity-70 rounded-full translate-x-1/3 -translate-y-1/3 blur-2xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-slate-100 to-transparent opacity-60 rounded-full -translate-x-1/4 translate-y-1/4 blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -39,10 +39,10 @@ export default function Contact({ data }: ContactProps) {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 text-cyan-600 font-semibold text-sm uppercase tracking-widest mb-4">
-            <span className="h-px w-8 bg-cyan-500" />
+          <div className="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm uppercase tracking-widest mb-4">
+            <span className="h-px w-8 bg-blue-600" />
             {data.sectionLabel}
-            <span className="h-px w-8 bg-cyan-500" />
+            <span className="h-px w-8 bg-blue-600" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
             {data.headline}
@@ -55,7 +55,7 @@ export default function Contact({ data }: ContactProps) {
             target="_blank"
             rel="noopener noreferrer"
             id="contact-cta"
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-lg shadow-lg shadow-blue-700/25 hover:shadow-blue-700/40 hover:scale-105 transition-all duration-300"
           >
             {data.ctaLabel}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -95,7 +95,7 @@ export default function Contact({ data }: ContactProps) {
           >
             {/* Doctor info */}
             <div className="mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4 shadow-lg shadow-blue-700/30">
                 <span className="text-white text-xl font-bold">AC</span>
               </div>
               <h3 className="text-white font-bold text-lg leading-snug mb-1">
@@ -116,8 +116,8 @@ export default function Contact({ data }: ContactProps) {
                   id="contact-location"
                   className="group flex items-start gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 border border-blue-500/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4 text-blue-400" />
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Ubicación</p>
@@ -135,8 +135,8 @@ export default function Contact({ data }: ContactProps) {
                   id="contact-phone"
                   className="group flex items-start gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 text-cyan-400" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 border border-blue-500/25 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 text-blue-400" />
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Teléfono</p>
@@ -151,8 +151,8 @@ export default function Contact({ data }: ContactProps) {
                   id="contact-email"
                   className="group flex items-start gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-4 h-4 text-cyan-400" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 border border-blue-500/25 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 text-blue-400" />
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Correo</p>
@@ -169,8 +169,8 @@ export default function Contact({ data }: ContactProps) {
                   id="contact-instagram"
                   className="group flex items-start gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center flex-shrink-0">
-                    <InstagramIcon className="w-4 h-4 text-cyan-400" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 border border-blue-500/25 flex items-center justify-center flex-shrink-0">
+                    <InstagramIcon className="w-4 h-4 text-blue-400" />
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Instagram</p>

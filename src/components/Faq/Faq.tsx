@@ -17,7 +17,7 @@ function AccordionItem({ item, isOpen, onToggle }: {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen
-          ? 'border-cyan-200 shadow-md shadow-cyan-500/10'
+          ? 'border-blue-200 shadow-md shadow-blue-600/8'
           : 'border-slate-100 hover:border-slate-200'
         }`}
     >
@@ -27,13 +27,13 @@ function AccordionItem({ item, isOpen, onToggle }: {
         className="w-full flex items-center justify-between gap-4 p-6 text-left bg-white hover:bg-slate-50 transition-colors duration-200"
         aria-expanded={isOpen}
       >
-        <span className={`font-semibold text-base leading-snug transition-colors duration-200 ${isOpen ? 'text-cyan-700' : 'text-slate-900'}`}>
+        <span className={`font-semibold text-base leading-snug transition-colors duration-200 ${isOpen ? 'text-blue-700' : 'text-slate-900'}`}>
           {item.question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200 ${isOpen ? 'bg-cyan-500 text-white' : 'bg-slate-100 text-slate-500'
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200 ${isOpen ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'
             }`}
         >
           <ChevronDown className="w-4 h-4" />
@@ -79,11 +79,11 @@ export default function Faq({ data }: FaqProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-cyan-600 font-semibold text-sm uppercase tracking-widest mb-4"
+            className="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm uppercase tracking-widest mb-4"
           >
-            <span className="h-px w-8 bg-cyan-500" />
+            <span className="h-px w-8 bg-blue-600" />
             {data.sectionLabel}
-            <span className="h-px w-8 bg-cyan-500" />
+            <span className="h-px w-8 bg-blue-600" />
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

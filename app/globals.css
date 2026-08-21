@@ -4,18 +4,18 @@
 @theme inline {
   --font-sans: var(--font-inter);
 
-  /* Cyan/Teal accent palette */
-  --color-cyan-50:  #ecfeff;
-  --color-cyan-100: #cffafe;
-  --color-cyan-200: #a5f3fc;
-  --color-cyan-300: #67e8f9;
-  --color-cyan-400: #22d3ee;
-  --color-cyan-500: #06b6d4;
-  --color-cyan-600: #0891b2;
-  --color-cyan-700: #0e7490;
-  --color-teal-300: #5eead4;
-  --color-teal-400: #2dd4bf;
-  --color-teal-500: #14b8a6;
+  /* Deep blue / medical accent palette */
+  --color-cyan-50:  #eff6ff;
+  --color-cyan-100: #dbeafe;
+  --color-cyan-200: #bfdbfe;
+  --color-cyan-300: #93c5fd;
+  --color-cyan-400: #60a5fa;
+  --color-cyan-500: #3b82f6;
+  --color-cyan-600: #2563eb;
+  --color-cyan-700: #1d4ed8;
+  --color-teal-300: #93c5fd;
+  --color-teal-400: #60a5fa;
+  --color-teal-500: #3b82f6;
 }
 
 /* ── Base resets ────────────────────────────────────────────────────────── */
