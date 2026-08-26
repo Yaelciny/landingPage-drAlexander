@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang={siteMetadata.locale} className={inter.variable}>
-      <body className="min-h-screen bg-white antialiased font-sans">
+      <body className="min-h-screen bg-white antialiased font-sans" suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -91,17 +91,17 @@ export default function Contact({ data }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-2xl shadow-slate-900/20"
+            className="bg-white rounded-3xl p-8 shadow-xl shadow-blue-100/50 border border-blue-50"
           >
             {/* Doctor info */}
             <div className="mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4 shadow-lg shadow-blue-700/30">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-4 shadow-lg shadow-blue-400/30">
                 <span className="text-white text-xl font-bold">AC</span>
               </div>
-              <h3 className="text-white font-bold text-lg leading-snug mb-1">
+              <h3 className="text-slate-900 font-bold text-lg leading-snug mb-1">
                 {data.doctorName}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-500 text-sm leading-relaxed">
                 {data.specialty}
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function Contact({ data }: ContactProps) {
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Ubicación</p>
-                    <p className="text-slate-200 text-sm flex items-center gap-1">
+                    <p className="text-slate-700 text-sm flex items-center gap-1">
                       {data.location}
                       <ArrowUpRight className="w-3 h-3 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </p>
@@ -140,7 +140,7 @@ export default function Contact({ data }: ContactProps) {
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Teléfono</p>
-                    <p className="text-slate-200 text-sm">{data.phone}</p>
+                    <p className="text-slate-700 text-sm">{data.phone}</p>
                   </div>
                 </a>
               </li>
@@ -156,7 +156,7 @@ export default function Contact({ data }: ContactProps) {
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Correo</p>
-                    <p className="text-slate-200 text-sm">{data.email}</p>
+                    <p className="text-slate-700 text-sm">{data.email}</p>
                   </div>
                 </a>
               </li>
@@ -174,9 +174,9 @@ export default function Contact({ data }: ContactProps) {
                   </div>
                   <div>
                     <p className="text-slate-400 text-xs mb-0.5">Instagram</p>
-                    <p className="text-slate-200 text-sm flex items-center gap-1">
+                    <p className="text-slate-700 text-sm flex items-center gap-1">
                       {data.instagram}
-                      <ArrowUpRight className="w-3 h-3 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ArrowUpRight className="w-3 h-3 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </p>
                   </div>
                 </a>

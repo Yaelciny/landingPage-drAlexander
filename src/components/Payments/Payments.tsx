@@ -50,12 +50,12 @@ export default function Payments({ data }: PaymentsProps) {
   return (
     <section
       id="pagos"
-      className="py-28 relative overflow-hidden bg-linear-to-br from-slate-900 via-slate-900 to-blue-950"
+      className="py-28 relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-50"
     >
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-64 h-64 bg-blue-600/8 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-blue-900/6 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/3 w-64 h-64 bg-blue-200/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-sky-200/30 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -65,18 +65,18 @@ export default function Payments({ data }: PaymentsProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4"
+            className="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm uppercase tracking-widest mb-4"
           >
-            <span className="h-px w-8 bg-blue-400" />
+            <span className="h-px w-8 bg-blue-600" />
             {data.sectionLabel}
-            <span className="h-px w-8 bg-blue-400" />
+            <span className="h-px w-8 bg-blue-600" />
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4"
           >
             {data.title}
           </motion.h2>
@@ -85,7 +85,7 @@ export default function Payments({ data }: PaymentsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-400 text-lg max-w-xl mx-auto"
+            className="text-slate-500 text-lg max-w-xl mx-auto"
           >
             {data.intro}
           </motion.p>
@@ -104,7 +104,7 @@ export default function Payments({ data }: PaymentsProps) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="text-center text-slate-500 text-xs mt-6"
+          className="text-center text-slate-400 text-xs mt-6"
         >
           {data.disclaimer}
         </motion.p>
