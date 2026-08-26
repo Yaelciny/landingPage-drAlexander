@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Tratamientos", href: "#tratamientos" },
   { label: "Pagos", href: "#pagos" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Preguntas frecuentes", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -56,9 +56,9 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${open
-          ? "bg-slate-950"
+          ? "bg-white"
           : scrolled
-            ? "bg-slate-950/90 backdrop-blur-md shadow-lg shadow-black/20"
+            ? "bg-white/90 backdrop-blur-md shadow-lg shadow-blue-100/60 border-blue-100/50"
             : "bg-transparent"
           }`}
       >
@@ -73,14 +73,14 @@ export default function Navbar() {
             }}
             id="nav-logo"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg shadow-blue-700/30 group-hover:shadow-blue-700/50 transition-shadow duration-300">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow duration-300">
               <span className="text-white text-xs font-bold tracking-tight">AC</span>
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-sm font-bold tracking-wide text-white">
+              <span className="text-sm font-bold tracking-wide text-slate-900">
                 Dr. Alexander Cerda
               </span>
-              <span className="text-[10px] text-blue-400 font-medium tracking-widest uppercase">
+              <span className="text-[10px] text-blue-500 font-medium tracking-widest uppercase">
                 Ortodoncia
               </span>
             </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="relative text-sm font-medium tracking-wide text-white/80 hover:text-white transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium tracking-wide text-slate-700 hover:text-blue-600 transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </motion.a>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 e.preventDefault();
                 handleNav("#contacto");
               }}
-              className="hidden md:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:shadow-lg hover:shadow-blue-700/30 hover:scale-105 transition-all duration-300"
+              className="hidden md:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:shadow-lg hover:shadow-blue-500/40 hover:scale-105 transition-all duration-300"
             >
               Agendar cita
             </a>
@@ -131,17 +131,17 @@ export default function Navbar() {
               <motion.span
                 animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.25 }}
-                className="block h-[2px] w-6 bg-white rounded-full"
+                className="block h-[2px] w-6 bg-slate-700 rounded-full"
               />
               <motion.span
                 animate={open ? { opacity: 0, x: -8 } : { opacity: 1, x: 0 }}
                 transition={{ duration: 0.25 }}
-                className="block h-[2px] w-6 bg-white rounded-full"
+                className="block h-[2px] w-6 bg-slate-700 rounded-full"
               />
               <motion.span
                 animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.25 }}
-                className="block h-[2px] w-6 bg-white rounded-full"
+                className="block h-[2px] w-6 bg-slate-700 rounded-full"
               />
             </button>
           </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden bg-slate-950 border-t border-white/10 overflow-hidden"
+              className="md:hidden bg-white border-t border-blue-100 overflow-hidden shadow-lg shadow-blue-100/40"
             >
               <nav className="px-6 py-4 flex flex-col gap-1">
                 {NAV_LINKS.map((link, i) => (
@@ -169,7 +169,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleNav(link.href);
                     }}
-                    className="py-3 px-4 text-base font-semibold tracking-wide text-slate-200 hover:text-white hover:bg-white/5 rounded-xl transition-colors text-left"
+                    className="py-3 px-4 text-base font-semibold tracking-wide text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors text-left"
                   >
                     {link.label}
                   </motion.a>
@@ -185,7 +185,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleNav("#contacto");
                   }}
-                  className="mt-3 mx-4 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-blue-700/25 transition-all duration-300"
+                  className="mt-3 mx-4 py-3 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
                 >
                   Agendar cita
                 </motion.a>

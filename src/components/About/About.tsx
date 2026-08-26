@@ -43,9 +43,119 @@ export default function About({ data }: AboutProps) {
           </span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-12 items-start">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-12 items-start">
 
-          {/* ── Col 1: Foto placeholder del doctor ── */}
+
+          {/* ── Col 1: Credenciales ── */}
+          <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={1}
+              variants={fadeUp}
+              className="relative bg-white rounded-3xl overflow-hidden border border-blue-100 shadow-xl shadow-blue-100/50"
+            >
+              {/* Accent stripe top */}
+              <div className="h-1.5 bg-gradient-to-r from-blue-500 via-sky-400 to-blue-600" />
+
+              <div className="p-8">
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-7">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-100 to-sky-100 border border-blue-200 flex items-center justify-center shadow-sm">
+                    <GraduationCap className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-slate-900 font-bold text-base leading-tight">
+                      Credenciales académicas
+                    </h3>
+                    <p className="text-blue-500 text-xs font-medium tracking-wide mt-0.5">
+                      Formación & certificaciones
+                    </p>
+                  </div>
+                </div>
+
+                {/* Lista */}
+                <ul className="space-y-4">
+                  {data.credentials.map((cred, i) => (
+                    <motion.li
+                      key={cred.id}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      custom={i + 2}
+                      variants={fadeUp}
+                      className="flex items-start gap-3 pb-4 border-b border-slate-100 last:border-0 last:pb-0"
+                    >
+                      <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
+                      </div>
+                      <span className="text-slate-600 text-sm leading-relaxed">
+                        {cred.text}
+                      </span>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* Decorative bottom glow */}
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-sky-100/60 rounded-full blur-2xl -translate-y-4 translate-x-4 pointer-events-none" />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* ── Col 2: Texto + Stats ── */}
+          <div>
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={1}
+              variants={fadeUp}
+              className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight"
+            >
+              {data.title}
+            </motion.h2>
+
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={2}
+              variants={fadeUp}
+              className="text-slate-600 text-lg leading-relaxed mb-10"
+            >
+              {data.body}
+            </motion.p>
+
+            {/* Stats */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={3}
+              variants={fadeUp}
+              className="grid grid-cols-2 gap-4"
+            >
+              <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-6 border border-blue-100">
+                <p className="text-4xl font-bold text-blue-600 mb-1">
+                  {data.yearsExperience}+
+                </p>
+                <p className="text-slate-600 text-sm font-medium">años de experiencia clínica</p>
+              </div>
+              <div className="bg-gradient-to-br from-sky-50 to-slate-50 rounded-2xl p-6 border border-sky-100">
+                <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center mb-2">
+                  <GraduationCap className="w-5 h-5 text-blue-600" />
+                </div>
+                <p className="text-slate-700 text-sm font-medium leading-tight">
+                  {data.specialtyLabel}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+
+
+          {/* ── Col 3: Foto placeholder del doctor ── */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -99,94 +209,6 @@ export default function About({ data }: AboutProps) {
               <p className="text-blue-600 text-xs">Especialista en Ortodoncia</p>
             </motion.div>
           </motion.div>
-
-          {/* ── Col 2: Texto + Stats ── */}
-          <div>
-            <motion.h2
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={1}
-              variants={fadeUp}
-              className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight"
-            >
-              {data.title}
-            </motion.h2>
-
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={2}
-              variants={fadeUp}
-              className="text-slate-600 text-lg leading-relaxed mb-10"
-            >
-              {data.body}
-            </motion.p>
-
-            {/* Stats */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={3}
-              variants={fadeUp}
-              className="grid grid-cols-2 gap-4"
-            >
-              <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-6 border border-blue-100">
-                <p className="text-4xl font-bold text-blue-600 mb-1">
-                  {data.yearsExperience}+
-                </p>
-                <p className="text-slate-600 text-sm font-medium">años de experiencia clínica</p>
-              </div>
-              <div className="bg-gradient-to-br from-sky-50 to-slate-50 rounded-2xl p-6 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center mb-2">
-                  <GraduationCap className="w-5 h-5 text-blue-600" />
-                </div>
-                <p className="text-slate-700 text-sm font-medium leading-tight">
-                  {data.specialtyLabel}
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* ── Col 3: Credenciales (ahora claro) ── */}
-          <div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={1}
-              variants={fadeUp}
-              className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 shadow-2xl shadow-blue-300/40"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-white font-semibold text-lg">Credenciales académicas</h3>
-              </div>
-
-              <ul className="space-y-4">
-                {data.credentials.map((cred, i) => (
-                  <motion.li
-                    key={cred.id}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    custom={i + 2}
-                    variants={fadeUp}
-                    className="flex items-start gap-3"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-sky-200 mt-0.5 flex-shrink-0" />
-                    <span className="text-blue-50 text-sm leading-relaxed">
-                      {cred.text}
-                    </span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
 
         </div>
       </div>
