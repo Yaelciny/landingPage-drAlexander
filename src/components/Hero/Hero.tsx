@@ -26,7 +26,7 @@ export default function Hero({ data }: HeroProps) {
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(59,130,246,1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,1) 1px, transparent 1px)',
+            'linear-gradient(rgba(0,109,119,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,109,119,1) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -117,7 +117,7 @@ export default function Hero({ data }: HeroProps) {
                 className="absolute inset-0 opacity-[0.06]"
                 style={{
                   backgroundImage:
-                    'radial-gradient(circle, rgba(59,130,246,1) 1px, transparent 1px)',
+                    'radial-gradient(circle, rgba(0,109,119,1) 1px, transparent 1px)',
                   backgroundSize: '24px 24px',
                 }}
               />

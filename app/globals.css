@@ -4,18 +4,46 @@
 @theme inline {
   --font-sans: var(--font-inter);
 
-  /* Deep blue / medical accent palette */
-  --color-cyan-50:  #eff6ff;
-  --color-cyan-100: #dbeafe;
-  --color-cyan-200: #bfdbfe;
-  --color-cyan-300: #93c5fd;
-  --color-cyan-400: #60a5fa;
-  --color-cyan-500: #3b82f6;
-  --color-cyan-600: #2563eb;
-  --color-cyan-700: #1d4ed8;
-  --color-teal-300: #93c5fd;
-  --color-teal-400: #60a5fa;
-  --color-teal-500: #3b82f6;
+  /* ── Nueva paleta: Teal / Ocean ───────────────────────────────────────── */
+  /* Primario oscuro  : #006d77  → blue-600 / blue-700 / sky-500 / sky-600  */
+  /* Primario medio   : #83c5be  → blue-300 / blue-400 / blue-500 / sky-400 */
+  /* Fondo suave      : #edf4f9  → blue-50 / sky-50 / blue-100 / sky-100    */
+
+  /* Remap blue */
+  --color-blue-50:  #edf4f9;
+  --color-blue-100: #edf4f9;
+  --color-blue-200: #c6e0e3;
+  --color-blue-300: #83c5be;
+  --color-blue-400: #83c5be;
+  --color-blue-500: #83c5be;
+  --color-blue-600: #006d77;
+  --color-blue-700: #006d77;
+  --color-blue-800: #005560;
+  --color-blue-900: #003d47;
+
+  /* Remap sky */
+  --color-sky-50:  #edf4f9;
+  --color-sky-100: #edf4f9;
+  --color-sky-200: #c6e0e3;
+  --color-sky-300: #83c5be;
+  --color-sky-400: #83c5be;
+  --color-sky-500: #006d77;
+  --color-sky-600: #006d77;
+
+  /* Remap cyan */
+  --color-cyan-50:  #edf4f9;
+  --color-cyan-100: #edf4f9;
+  --color-cyan-200: #c6e0e3;
+  --color-cyan-300: #83c5be;
+  --color-cyan-400: #83c5be;
+  --color-cyan-500: #006d77;
+  --color-cyan-600: #006d77;
+  --color-cyan-700: #005560;
+
+  /* Remap teal (backup) */
+  --color-teal-300: #83c5be;
+  --color-teal-400: #83c5be;
+  --color-teal-500: #006d77;
 }
 
 /* ── Base resets ────────────────────────────────────────────────────────── */

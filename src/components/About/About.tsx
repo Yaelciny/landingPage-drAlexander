@@ -174,7 +174,7 @@ export default function About({ data }: AboutProps) {
                 className="absolute inset-0 opacity-[0.05]"
                 style={{
                   backgroundImage:
-                    'radial-gradient(circle, rgba(59,130,246,1) 1px, transparent 1px)',
+                    'radial-gradient(circle, rgba(0,109,119,1) 1px, transparent 1px)',
                   backgroundSize: '20px 20px',
                 }}
               />
