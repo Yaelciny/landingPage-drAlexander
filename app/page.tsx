@@ -6,6 +6,7 @@ import Payments from '@/components/Payments/Payments';
 import Faq from '@/components/Faq/Faq';
 import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
+import Galery from '@/components/Galery/Galery';
 import WhatsAppBubble from '@/components/WhatsAppBubble/WhatsAppBubble';
 import {
   hero,
@@ -23,6 +24,7 @@ export default function Page() {
       <Hero data={hero} />
       <About data={about} />
       <Treatments data={treatments} />
+      <Galery />
       <Payments data={payments} />
       <Faq data={faq} />
       <Contact data={contact} />

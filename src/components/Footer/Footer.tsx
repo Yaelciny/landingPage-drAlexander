@@ -1,6 +1,8 @@
 'use client';
 
 import { MapPin, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
+import logo from '@/assets/logo/logo-3.png';
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -34,6 +36,14 @@ export default function Footer({ contact }: FooterProps) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
+            <Image
+              src={logo}
+              alt="Dr. Alexander Cerda — Ortodoncista"
+              height={100}
+              className="h-20 w-auto object-contain transition-opacity mb-4"
+              loading="eager"
+              priority
+            />
             <p className="text-white font-bold text-lg mb-1">{contact.doctorName}</p>
             <p className="text-slate-500 text-sm leading-relaxed">{contact.specialty}</p>
           </div>

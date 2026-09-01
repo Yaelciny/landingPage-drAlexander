@@ -7,6 +7,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import logo from "@/assets/logo/logo-1.png";
 
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
@@ -73,17 +75,14 @@ export default function Navbar() {
             }}
             id="nav-logo"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow duration-300">
-              <span className="text-white text-xs font-bold tracking-tight">AC</span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-sm font-bold tracking-wide text-slate-900">
-                Dr. Alexander Cerda
-              </span>
-              <span className="text-[10px] text-blue-500 font-medium tracking-widest uppercase">
-                Ortodoncia
-              </span>
-            </div>
+            <Image
+              src={logo}
+              alt="Dr. Alexander Cerda — Ortodoncista"
+              height={100}
+              className="h-17 w-auto object-contain group-hover:opacity-90 transition-opacity duration-300"
+              loading="eager"
+              priority
+            />
           </motion.a>
 
           {/* Desktop nav */}

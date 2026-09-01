@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, ArrowUpRight, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import logo from '@/assets/logo/logo-2.png';
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -95,9 +97,12 @@ export default function Contact({ data }: ContactProps) {
           >
             {/* Doctor info */}
             <div className="mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-4 shadow-lg shadow-blue-400/30">
-                <span className="text-white text-xl font-bold">AC</span>
-              </div>
+              <Image
+                src={logo}
+                alt="Dr. Alexander Cerda — Ortodoncista"
+                height={56}
+                className="h-14 w-auto object-contain mb-4"
+              />
               <h3 className="text-slate-900 font-bold text-lg leading-snug mb-1">
                 {data.doctorName}
               </h3>

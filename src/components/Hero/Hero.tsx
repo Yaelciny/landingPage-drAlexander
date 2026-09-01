@@ -55,7 +55,7 @@ export default function Hero({ data }: HeroProps) {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6"
             >
               {data.headline.split(' ').map((word, i) =>
-                word === 'sonrisa' || word === 'diseñado' ? (
+                word === 'sonrisa' || word === 'para' || word === 'ti' ? (
                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">
                     {word}{' '}
                   </span>
