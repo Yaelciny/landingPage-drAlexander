@@ -1,0 +1,24 @@
+﻿{
+  "name": "Dr. Alexander Cerda | Ortodoncista",
+  "short_name": "Dr. Cerda",
+  "description": "Especialista en Ortodoncia y Ortopedia Maxilofacial en Zapopan, Jalisco.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#006D77",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "/icon-tooth.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-tooth.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
