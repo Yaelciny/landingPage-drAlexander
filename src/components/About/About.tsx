@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
-import drPhoto from '@/assets/dr/dr-2.jpeg';
+import drPhoto from '@/assets/dr/dr-2.webp';
 import type { AboutData } from '@/data/nat';
 
 interface AboutProps {

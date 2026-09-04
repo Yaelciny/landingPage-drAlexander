@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, ArrowUpRight, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import logo from '@/assets/logo/logo-2.png';
+import logo from '@/assets/logo/logo-2.webp';
 
 function InstagramIcon({ className }: { className?: string }) {
   return (

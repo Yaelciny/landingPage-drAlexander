@@ -2,7 +2,7 @@
 
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Image from 'next/image';
-import logo from '@/assets/logo/logo-3.png';
+import logo from '@/assets/logo/logo-3.webp';
 
 function InstagramIcon({ className }: { className?: string }) {
   return (

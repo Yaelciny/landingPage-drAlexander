@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Award, Scan, Star } from 'lucide-react';
 import Image from 'next/image';
-import drPhoto from '@/assets/dr/dr-1.jpeg';
+import drPhoto from '@/assets/dr/dr-1.webp';
 import type { HeroData } from '@/data/nat';
 
 interface HeroProps {

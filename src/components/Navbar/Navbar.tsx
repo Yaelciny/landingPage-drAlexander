@@ -8,7 +8,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import logo from "@/assets/logo/logo-1.png";
+import logo from "@/assets/logo/logo-1.webp";
 
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },

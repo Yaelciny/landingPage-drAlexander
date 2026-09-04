@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
 
-import foto1 from '@/assets/gallery/foto-1.png';
-import foto2 from '@/assets/gallery/foto-2.png';
-import foto3 from '@/assets/gallery/foto-3.png';
-import foto4 from '@/assets/gallery/foto-4.png';
-import foto5 from '@/assets/gallery/foto-5.png';
-import foto6 from '@/assets/gallery/foto-6.png';
-import foto7 from '@/assets/gallery/foto-7.png';
-import foto8 from '@/assets/gallery/foto-8.png';
-import foto9 from '@/assets/gallery/foto-9.png';
-import foto10 from '@/assets/gallery/foto-10.png';
+import foto1 from '@/assets/gallery/foto-1.webp';
+import foto2 from '@/assets/gallery/foto-2.webp';
+import foto3 from '@/assets/gallery/foto-3.webp';
+import foto4 from '@/assets/gallery/foto-4.webp';
+import foto5 from '@/assets/gallery/foto-5.webp';
+import foto6 from '@/assets/gallery/foto-6.webp';
+import foto7 from '@/assets/gallery/foto-7.webp';
+import foto8 from '@/assets/gallery/foto-8.webp';
+import foto9 from '@/assets/gallery/foto-9.webp';
+import foto10 from '@/assets/gallery/foto-10.webp';
 
 const photos = [
     { src: foto1, alt: 'Caso de ortodoncia 1' },
