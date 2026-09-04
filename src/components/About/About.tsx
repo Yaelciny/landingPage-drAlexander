@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle2, GraduationCap, User } from 'lucide-react';
+import { CheckCircle2, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import drPhoto from '@/assets/dr/dr-2.jpeg';
 import type { AboutData } from '@/data/nat';
 
 interface AboutProps {
@@ -168,31 +170,16 @@ export default function About({ data }: AboutProps) {
             <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-blue-200/40 to-sky-100/30 blur-2xl" />
 
             {/* Marco foto */}
-            <div className="relative rounded-3xl overflow-hidden border border-blue-100 shadow-xl shadow-blue-200/40 bg-white flex flex-col items-center justify-center gap-4 aspect-[3/4]">
-              {/* Patrón de fondo */}
-              <div
-                className="absolute inset-0 opacity-[0.05]"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle, rgba(0,109,119,1) 1px, transparent 1px)',
-                  backgroundSize: '20px 20px',
-                }}
+            <div className="relative rounded-3xl overflow-hidden border border-blue-100 shadow-xl shadow-blue-200/40 aspect-[3/4]">
+              <Image
+                src={drPhoto}
+                alt="Dr. Leonel Alexander Cerda Urbina — Especialista en Ortodoncia"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-top"
               />
-
-              {/* Gradiente superior */}
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-50/80 to-blue-50/50" />
-
-              {/* Icono */}
-              <div className="relative z-10 w-28 h-28 rounded-full bg-gradient-to-br from-blue-100 to-sky-100 border-2 border-dashed border-blue-300 flex items-center justify-center">
-                <User className="w-14 h-14 text-blue-400" />
-              </div>
-
-              {/* Texto */}
-              <div className="relative z-10 text-center px-6">
-                <p className="text-blue-600 font-semibold text-sm">Foto del Dr. Alexander</p>
-                <p className="text-slate-400 text-xs mt-1">Tu foto irá aquí</p>
-              </div>
-
+              {/* Overlay sutil */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent" />
               {/* Línea inferior */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
             </div>

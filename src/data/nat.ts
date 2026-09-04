@@ -372,13 +372,13 @@ export const contact: ContactData = {
   subheadline:
     "Agenda una valoración conmigo para conocer el estado de tu sonrisa y encontrar el tratamiento adecuado para ti.",
   ctaLabel: "Agendar valoración",
-  ctaHref: "https://wa.me/523336429896",
+  ctaHref: "https://wa.me/5213318792761",
   doctorName: "Dr. Leonel Alexander Cerda Urbina",
   specialty:
     "Cirujano Dentista con Especialidad en Ortodoncia y Ortopedia Maxilofacial",
   location: "Natura Grupo Médico, Av. Abedules 539, Zapopan, Jalisco",
-  phone: "+52 33 3642 9896",
-  phoneHref: "tel:+523336429896",
+  phone: "+52 1 33 1879 2761",
+  phoneHref: "tel:+5213318792761",
   email: "alexandercerda1@gmail.com",
   emailHref: "mailto:alexandercerda1@gmail.com",
   instagram: "@dr.alexandercerda",

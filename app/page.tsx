@@ -29,7 +29,7 @@ export default function Page() {
       <Faq data={faq} />
       <Contact data={contact} />
       <Footer contact={contact} />
-      <WhatsAppBubble phone="523336429896" />
+      <WhatsAppBubble phone="5213318792761" />
     </main>
   );
 }
