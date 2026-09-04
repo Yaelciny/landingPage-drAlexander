@@ -14,8 +14,10 @@ const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Tratamientos", href: "#tratamientos" },
+  { label: "Galeria", href: "#galeria" },
   { label: "Pagos", href: "#pagos" },
   { label: "Preguntas frecuentes", href: "#faq" },
+
 ];
 
 export default function Navbar() {

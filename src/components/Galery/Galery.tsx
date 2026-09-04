@@ -154,7 +154,7 @@ export default function Galery() {
                                 draggable={false}
                             />
                             {/* Contador */}
-                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/15 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full border border-white/20">
+                            <div className=" absolute top-2 left-1/2 -translate-x-1/2 bg-white/15 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full border border-white/20">
                                 {selected + 1} / {photos.length}
                             </div>
                         </motion.div>
