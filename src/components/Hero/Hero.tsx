@@ -8,24 +8,21 @@ import type { StaticImageData } from 'next/image';
 import type { HeroData } from '@/data/nat';
 
 // ── Import all doctor photos ───────────────────────────────────────────────────
-import a1  from '@/assets/dr/fotos-alexander/A1.png';
-import a2  from '@/assets/dr/fotos-alexander/A2.png';
-import a3  from '@/assets/dr/fotos-alexander/A3.png';
-import a4  from '@/assets/dr/fotos-alexander/A4.jpg';
-import a5  from '@/assets/dr/fotos-alexander/A5.jpg';
-import a6  from '@/assets/dr/fotos-alexander/A6.jpg';
-import a7  from '@/assets/dr/fotos-alexander/A7.jpg';
-import a8  from '@/assets/dr/fotos-alexander/A8.jpg';
-import a9  from '@/assets/dr/fotos-alexander/A9.jpg';
+import a1 from '@/assets/dr/fotos-alexander/A1.png';
+import a2 from '@/assets/dr/fotos-alexander/A2.png';
+import a3 from '@/assets/dr/fotos-alexander/A3.png';
+import a5 from '@/assets/dr/fotos-alexander/A5.jpg';
+import a6 from '@/assets/dr/fotos-alexander/A6.jpg';
+import a8 from '@/assets/dr/fotos-alexander/A8.jpg';
+import a9 from '@/assets/dr/fotos-alexander/A9.jpg';
 import a10 from '@/assets/dr/fotos-alexander/A10.jpg';
-import a11 from '@/assets/dr/fotos-alexander/A11.jpg';
 import a12 from '@/assets/dr/fotos-alexander/A12.jpg';
 import a13 from '@/assets/dr/fotos-alexander/A13.jpg';
 import a14 from '@/assets/dr/fotos-alexander/A14.jpg';
 import a15 from '@/assets/dr/fotos-alexander/A15.jpg';
 
 const slides: StaticImageData[] = [
-  a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15,
+  a1, a2, a3, a5, a6, a8, a9, a10, a12, a13, a14, a15,
 ];
 
 const AUTOPLAY_INTERVAL = 4000; // ms
@@ -43,7 +40,7 @@ function HeroCarousel() {
     []
   );
 
-  const next = useCallback(() => goTo(current + 1,  1), [current, goTo]);
+  const next = useCallback(() => goTo(current + 1, 1), [current, goTo]);
   const prev = useCallback(() => goTo(current - 1, -1), [current, goTo]);
 
   // Auto-play
@@ -55,11 +52,11 @@ function HeroCarousel() {
   const variants = {
     enter: (dir: number) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
     center: { x: 0, opacity: 1 },
-    exit:  (dir: number) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+    exit: (dir: number) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
   };
 
   return (
-    <div className="relative w-72 h-96 sm:w-80 sm:h-[440px] rounded-3xl overflow-hidden border border-blue-200 shadow-2xl shadow-blue-300/30 select-none">
+    <div className="relative w-72 h-96 sm:w-80 sm:h-[440px] lg:w-[420px] lg:h-[580px] rounded-3xl overflow-hidden border border-blue-200 shadow-2xl shadow-blue-300/30 select-none">
       {/* Slides */}
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
@@ -111,11 +108,10 @@ function HeroCarousel() {
             key={i}
             onClick={() => goTo(i, i > current ? 1 : -1)}
             aria-label={`Ir a foto ${i + 1}`}
-            className={`rounded-full transition-all duration-300 ${
-              i === current
-                ? 'w-5 h-1.5 bg-white'
-                : 'w-1.5 h-1.5 bg-white/50 hover:bg-white/80'
-            }`}
+            className={`rounded-full transition-all duration-300 ${i === current
+              ? 'w-5 h-1.5 bg-white'
+              : 'w-1.5 h-1.5 bg-white/50 hover:bg-white/80'
+              }`}
           />
         ))}
       </div>
@@ -240,7 +236,7 @@ export default function Hero({ data }: HeroProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -bottom-5 -left-6 bg-white border border-blue-100 rounded-2xl px-4 py-3 shadow-xl shadow-blue-100/50"
+              className="absolute -top-5 -left-6 bg-white border border-blue-100 rounded-2xl px-4 py-3 shadow-xl shadow-blue-100/50"
             >
               <p className="text-slate-900 font-semibold text-sm">Dr. Alexander Cerda</p>
               <p className="text-blue-600 text-xs">Ortodoncista certificado</p>
