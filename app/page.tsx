@@ -9,6 +9,7 @@ import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import Galery from '@/components/Galery/Galery';
 import WhatsAppBubble from '@/components/WhatsAppBubble/WhatsAppBubble';
+import CallBubble from '@/components/CallBubble/CallBubble';
 import {
   hero,
   about,
@@ -32,6 +33,7 @@ export default function Page() {
       <Faq data={faq} />
       <Contact data={contact} />
       <Footer contact={contact} />
+      <CallBubble phone="523323881703" />
       <WhatsAppBubble phone="523323881703" />
     </main>
   );
