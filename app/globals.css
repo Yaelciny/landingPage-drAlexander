@@ -10,7 +10,7 @@
   /* Fondo suave      : #edf4f9  → blue-50 / sky-50 / blue-100 / sky-100    */
 
   /* Remap blue */
-  --color-blue-50:  #edf4f9;
+  --color-blue-50: #edf4f9;
   --color-blue-100: #edf4f9;
   --color-blue-200: #c6e0e3;
   --color-blue-300: #83c5be;
@@ -22,7 +22,7 @@
   --color-blue-900: #003d47;
 
   /* Remap sky */
-  --color-sky-50:  #edf4f9;
+  --color-sky-50: #edf4f9;
   --color-sky-100: #edf4f9;
   --color-sky-200: #c6e0e3;
   --color-sky-300: #83c5be;
@@ -31,7 +31,7 @@
   --color-sky-600: #006d77;
 
   /* Remap cyan */
-  --color-cyan-50:  #edf4f9;
+  --color-cyan-50: #edf4f9;
   --color-cyan-100: #edf4f9;
   --color-cyan-200: #c6e0e3;
   --color-cyan-300: #83c5be;
@@ -47,7 +47,9 @@
 }
 
 /* ── Base resets ────────────────────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -59,7 +61,6 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: justify;
 }
 
 /* ── Utility: scroll-offset for fixed navbar ────────────────────────────── */

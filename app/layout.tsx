@@ -144,8 +144,8 @@ const jsonLd = {
       image: OG_IMAGE,
       description: DESCRIPTION,
       priceRange: '$$',
-      telephone: '+52-33-3642-9896',
-      email: 'alexandercerda1@gmail.com',
+      telephone: '+52-33-2388-1703',
+      email: 'ortodoncia@dralexandercerda.com',
       sameAs: [
         'https://instagram.com/dr.alexandercerda',
         `${SITE_URL}`,

@@ -1,11 +1,129 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Award, Scan, Star } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import drPhoto from '@/assets/dr/dr-1.webp';
+import type { StaticImageData } from 'next/image';
 import type { HeroData } from '@/data/nat';
 
+// ── Import all doctor photos ───────────────────────────────────────────────────
+import a1  from '@/assets/dr/fotos-alexander/A1.png';
+import a2  from '@/assets/dr/fotos-alexander/A2.png';
+import a3  from '@/assets/dr/fotos-alexander/A3.png';
+import a4  from '@/assets/dr/fotos-alexander/A4.jpg';
+import a5  from '@/assets/dr/fotos-alexander/A5.jpg';
+import a6  from '@/assets/dr/fotos-alexander/A6.jpg';
+import a7  from '@/assets/dr/fotos-alexander/A7.jpg';
+import a8  from '@/assets/dr/fotos-alexander/A8.jpg';
+import a9  from '@/assets/dr/fotos-alexander/A9.jpg';
+import a10 from '@/assets/dr/fotos-alexander/A10.jpg';
+import a11 from '@/assets/dr/fotos-alexander/A11.jpg';
+import a12 from '@/assets/dr/fotos-alexander/A12.jpg';
+import a13 from '@/assets/dr/fotos-alexander/A13.jpg';
+import a14 from '@/assets/dr/fotos-alexander/A14.jpg';
+import a15 from '@/assets/dr/fotos-alexander/A15.jpg';
+
+const slides: StaticImageData[] = [
+  a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15,
+];
+
+const AUTOPLAY_INTERVAL = 4000; // ms
+
+// ── Carousel ──────────────────────────────────────────────────────────────────
+function HeroCarousel() {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 = next, -1 = prev
+
+  const goTo = useCallback(
+    (index: number, dir: number) => {
+      setDirection(dir);
+      setCurrent((index + slides.length) % slides.length);
+    },
+    []
+  );
+
+  const next = useCallback(() => goTo(current + 1,  1), [current, goTo]);
+  const prev = useCallback(() => goTo(current - 1, -1), [current, goTo]);
+
+  // Auto-play
+  useEffect(() => {
+    const id = setInterval(next, AUTOPLAY_INTERVAL);
+    return () => clearInterval(id);
+  }, [next]);
+
+  const variants = {
+    enter: (dir: number) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit:  (dir: number) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+  };
+
+  return (
+    <div className="relative w-72 h-96 sm:w-80 sm:h-[440px] rounded-3xl overflow-hidden border border-blue-200 shadow-2xl shadow-blue-300/30 select-none">
+      {/* Slides */}
+      <AnimatePresence initial={false} custom={direction} mode="popLayout">
+        <motion.div
+          key={current}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={slides[current]}
+            alt={`Dr. Alexander Cerda — foto ${current + 1}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            className="object-cover object-top"
+            priority={current === 0}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/25 via-transparent to-transparent pointer-events-none" />
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400/40 to-transparent pointer-events-none" />
+
+      {/* Prev / Next buttons */}
+      <button
+        onClick={prev}
+        aria-label="Foto anterior"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-white border border-blue-100 flex items-center justify-center shadow transition-all duration-200 hover:scale-110"
+      >
+        <ChevronLeft className="w-4 h-4 text-blue-700" />
+      </button>
+      <button
+        onClick={next}
+        aria-label="Siguiente foto"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-white border border-blue-100 flex items-center justify-center shadow transition-all duration-200 hover:scale-110"
+      >
+        <ChevronRight className="w-4 h-4 text-blue-700" />
+      </button>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i, i > current ? 1 : -1)}
+            aria-label={`Ir a foto ${i + 1}`}
+            className={`rounded-full transition-all duration-300 ${
+              i === current
+                ? 'w-5 h-1.5 bg-white'
+                : 'w-1.5 h-1.5 bg-white/50 hover:bg-white/80'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
 interface HeroProps {
   data: HeroData;
 }
@@ -102,7 +220,7 @@ export default function Hero({ data }: HeroProps) {
             </motion.div>
           </div>
 
-          {/* ── RIGHT: marco de foto ── */}
+          {/* ── RIGHT: carrusel de fotos ── */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -112,20 +230,9 @@ export default function Hero({ data }: HeroProps) {
             {/* Glow detrás del marco */}
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-300/30 to-sky-200/20 blur-2xl" />
 
-            {/* Marco principal */}
-            <div className="relative w-72 h-96 sm:w-80 sm:h-[440px] rounded-3xl overflow-hidden border border-blue-200 shadow-2xl shadow-blue-300/30">
-              <Image
-                src={drPhoto}
-                alt="Dr. Leonel Alexander Cerda Urbina — Ortodoncista"
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover object-top"
-                priority
-              />
-              {/* Overlay sutil */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent" />
-              {/* Línea decorativa inferior */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
+            {/* Carrusel */}
+            <div className="relative">
+              <HeroCarousel />
             </div>
 
             {/* Badge flotante: nombre */}

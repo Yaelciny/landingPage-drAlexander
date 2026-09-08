@@ -24,7 +24,8 @@ export interface AboutData {
   title: string;
   body: string;
   credentials: Credential[];
-  yearsExperience: number;
+  yearsExperience: number;          // years as ortodoncista
+  yearsAsOdontologist: number;      // total years as odontólogo
   patientsLabel: string;
   specialtyLabel: string;
 }
@@ -94,6 +95,23 @@ export interface ContactData {
   mapsHref: string;
 }
 
+export interface CommonCase {
+  id: string;
+  icon: string;       // Lucide icon name
+  title: string;
+  description: string;
+  tag: string;        // short label badge
+}
+
+export interface CommonCasesData {
+  sectionLabel: string;
+  title: string;
+  subtitle: string;
+  cases: CommonCase[];
+  ctaLabel: string;
+  ctaHref: string;
+}
+
 export interface SiteMetadata {
   title: string;
   description: string;
@@ -116,13 +134,13 @@ export const hero: HeroData = {
     "Soy el Dr. Leonel Alexander Cerda Urbina, especialista en Ortodoncia y Ortopedia Maxilofacial. Brindo atención a niños, jóvenes y adultos mediante diagnósticos precisos, planificación digital y tratamientos adaptados a las necesidades de cada paciente.",
   ctaLabel: "Agendar mi cita",
   ctaHref: "#contacto",
-  badge: "Certificado Invisalign · MBT · Escaneo 3D",
+  badge: "Alineadores Invisalign, Brackets, Diseño de sonrisa, Problemas articulares.",
 };
 
 export const about: AboutData = {
   sectionLabel: "Sobre mí",
   title: "Atención cercana con respaldo científico",
-  body: "Soy Cirujano Dentista con Especialidad en Ortodoncia y cuento con 5 años de experiencia clínica. Me especializo en el diagnóstico y tratamiento de alteraciones dentales y maxilares. Mi objetivo es brindarte una atención cercana, explicarte claramente cada etapa y ayudarte a elegir el tratamiento adecuado para tu sonrisa.",
+  body: "Soy Cirujano Dentista con más de 10 años de experiencia en odontología y 5 años de especialidad en Ortodoncia y Ortopedia Maxilofacial. Me especializo en el diagnóstico y tratamiento de alteraciones dentales y maxilares. Mi objetivo es brindarte una atención cercana, explicarte claramente cada etapa y ayudarte a elegir el tratamiento adecuado para tu sonrisa.",
   credentials: [
     {
       id: "cred-1",
@@ -146,6 +164,7 @@ export const about: AboutData = {
     },
   ],
   yearsExperience: 5,
+  yearsAsOdontologist: 10,
   patientsLabel: "Pacientes atendidos",
   specialtyLabel: "Ortodoncia & Ortopedia Maxilofacial",
 };
@@ -372,17 +391,60 @@ export const contact: ContactData = {
   subheadline:
     "Agenda una valoración conmigo para conocer el estado de tu sonrisa y encontrar el tratamiento adecuado para ti.",
   ctaLabel: "Agendar valoración",
-  ctaHref: "https://wa.me/5213318792761",
+  ctaHref: "https://wa.me/523323881703",
   doctorName: "Dr. Leonel Alexander Cerda Urbina",
   specialty:
     "Cirujano Dentista con Especialidad en Ortodoncia y Ortopedia Maxilofacial",
   location: "Natura Grupo Médico, Av. Abedules 539, Zapopan, Jalisco",
-  phone: "+52 1 33 1879 2761",
-  phoneHref: "tel:+5213318792761",
-  email: "alexandercerda1@gmail.com",
-  emailHref: "mailto:alexandercerda1@gmail.com",
+  phone: "+52 33 2388 1703",
+  phoneHref: "tel:+523323881703",
+  email: "ortodoncia@dralexandercerda.com",
+  emailHref: "mailto:ortodoncia@dralexandercerda.com",
   instagram: "@dr.alexandercerda",
   instagramHref: "https://instagram.com/dr.alexandercerda",
   mapsHref:
     "https://www.google.com/maps/search/Natura+Grupo+Medico+Abedules+539+Zapopan",
+};
+
+export const commonCases: CommonCasesData = {
+  sectionLabel: "Casos frecuentes",
+  title: "¿Te identificas con alguno de estos casos?",
+  subtitle:
+    "Estos son los motivos de consulta más comunes en la zona. Si uno de ellos te describe, agenda una valoración y encontremos la solución adecuada para ti.",
+  ctaLabel: "Agendar valoración",
+  ctaHref: "https://wa.me/523323881703",
+  cases: [
+    {
+      id: "case-1",
+      icon: "AlignJustify",
+      title: "Dientes desalineados por falta de espacio",
+      description:
+        "Cuando los dientes no tienen suficiente espacio en la mandíbula se apilan, giran o quedan atrapados. La ortodoncia crea ese espacio y los guía a su posición ideal.",
+      tag: "Muy frecuente",
+    },
+    {
+      id: "case-2",
+      icon: "ChevronsUpDown",
+      title: "Mordidas profundas o abiertas",
+      description:
+        "Una mordida profunda cubre demasiado los dientes inferiores; una mordida abierta impide que se toquen al cerrar. Ambas afectan la masticación y pueden corregirse con ortodoncia o combinada con ortopedia.",
+      tag: "Frecuente",
+    },
+    {
+      id: "case-3",
+      icon: "ArrowLeftRight",
+      title: "Mordidas cruzadas",
+      description:
+        "Ocurre cuando los dientes superiores quedan por dentro de los inferiores. Puede ser anterior o lateral, y en niños en crecimiento se corrige con mayor eficacia mediante ortopedia maxilofacial.",
+      tag: "Frecuente",
+    },
+    {
+      id: "case-4",
+      icon: "RefreshCw",
+      title: "Dientes desalineados luego de un tratamiento de ortodoncia",
+      description:
+        "La recidiva es más común de lo que crees. Si tus dientes se movieron después del tratamiento, un re-tratamiento bien planificado puede devolverte la sonrisa que tenías.",
+      tag: "Re-tratamiento",
+    },
+  ],
 };

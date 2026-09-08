@@ -140,17 +140,15 @@ export default function About({ data }: AboutProps) {
             >
               <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-6 border border-blue-100">
                 <p className="text-4xl font-bold text-blue-600 mb-1">
-                  {data.yearsExperience}+
+                  {data.yearsAsOdontologist}+
                 </p>
-                <p className="text-slate-600 text-sm font-medium">años de experiencia clínica</p>
+                <p className="text-slate-600 text-sm font-medium">años como odontólogo</p>
               </div>
               <div className="bg-gradient-to-br from-sky-50 to-slate-50 rounded-2xl p-6 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center mb-2">
-                  <GraduationCap className="w-5 h-5 text-blue-600" />
-                </div>
-                <p className="text-slate-700 text-sm font-medium leading-tight">
-                  {data.specialtyLabel}
+                <p className="text-4xl font-bold text-blue-600 mb-1">
+                  {data.yearsExperience}+
                 </p>
+                <p className="text-slate-600 text-sm font-medium">años como ortodoncista</p>
               </div>
             </motion.div>
           </div>
