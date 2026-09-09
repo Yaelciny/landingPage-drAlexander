@@ -8,18 +8,18 @@ import type { StaticImageData } from 'next/image';
 import type { HeroData } from '@/data/nat';
 
 // ── Import all doctor photos ───────────────────────────────────────────────────
-import a1 from '@/assets/dr/fotos-alexander/A1.png';
-import a2 from '@/assets/dr/fotos-alexander/A2.png';
-import a3 from '@/assets/dr/fotos-alexander/A3.png';
-import a5 from '@/assets/dr/fotos-alexander/A5.jpg';
-import a6 from '@/assets/dr/fotos-alexander/A6.jpg';
-import a8 from '@/assets/dr/fotos-alexander/A8.jpg';
-import a9 from '@/assets/dr/fotos-alexander/A9.jpg';
-import a10 from '@/assets/dr/fotos-alexander/A10.jpg';
-import a12 from '@/assets/dr/fotos-alexander/A12.jpg';
-import a13 from '@/assets/dr/fotos-alexander/A13.jpg';
-import a14 from '@/assets/dr/fotos-alexander/A14.jpg';
-import a15 from '@/assets/dr/fotos-alexander/A15.jpg';
+import a1 from '@/assets/dr/fotos-alexander/A1.webp';
+import a2 from '@/assets/dr/fotos-alexander/A2.webp';
+import a3 from '@/assets/dr/fotos-alexander/A3.webp';
+import a5 from '@/assets/dr/fotos-alexander/A5.webp';
+import a6 from '@/assets/dr/fotos-alexander/A6.webp';
+import a8 from '@/assets/dr/fotos-alexander/A8.webp';
+import a9 from '@/assets/dr/fotos-alexander/A9.webp';
+import a10 from '@/assets/dr/fotos-alexander/A10.webp';
+import a12 from '@/assets/dr/fotos-alexander/A12.webp';
+import a13 from '@/assets/dr/fotos-alexander/A13.webp';
+import a14 from '@/assets/dr/fotos-alexander/A14.webp';
+import a15 from '@/assets/dr/fotos-alexander/A15.webp';
 
 const slides: StaticImageData[] = [
   a1, a2, a3, a5, a6, a8, a9, a10, a12, a13, a14, a15,
